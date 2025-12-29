@@ -2,18 +2,18 @@
   "name": "@julr/otel-instrumentation-clickhouse",
   "version": "1.0.0",
   "description": "OpenTelemetry automatic instrumentation for ClickHouse client",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./build/src/index.js",
+  "module": "./build/src/index.js",
+  "types": "./build/src/index.d.ts",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./build/src/index.js",
+      "types": "./build/src/index.d.ts"
     }
   },
   "files": [
-    "dist"
+    "build"
   ],
   "scripts": {
     "build": "tsc",
