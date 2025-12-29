@@ -1,6 +1,6 @@
 {
   "name": "@julr/otel-instrumentation-clickhouse",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "OpenTelemetry automatic instrumentation for ClickHouse client",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -32,7 +32,10 @@
       "release": true
     },
     "hooks": {
-      "before:init": ["pnpm run lint", "pnpm run typecheck"]
+      "before:init": [
+        "pnpm run lint",
+        "pnpm run typecheck"
+      ]
     }
   },
   "keywords": [
