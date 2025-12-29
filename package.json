@@ -21,7 +21,19 @@
     "format": "oxfmt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "pnpm run build",
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "hooks": {
+      "before:init": ["pnpm run lint", "pnpm run typecheck"]
+    }
   },
   "keywords": [
     "opentelemetry",
@@ -34,6 +46,9 @@
   ],
   "author": "Julien Ripouteau <julien@ripouteau.com>",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/julien-r44/otel-instrumentation-clickhouse.git"
@@ -54,12 +69,13 @@
     "@opentelemetry/instrumentation": "^0.208.0"
   },
   "devDependencies": {
-    "@julr/tooling-configs": "^4.0.0",
+    "@julr/tooling-configs": "^5.0.0",
     "@opentelemetry/api": "^1.9.0",
     "@types/node": "^25.0.3",
     "oxfmt": "^0.21.0",
     "oxlint": "^1.36.0",
     "oxlint-tsgolint": "^0.10.0",
+    "release-it": "^19.2.2",
     "typescript": "^5.9.3"
   }
 }
