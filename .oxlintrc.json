@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "typescript",
+    "eslint",
+    "unicorn",
+    "import",
+    "promise"
+  ],
+  "rules": {
+    "typescript/triple-slash-reference": "off"
+  }
+}

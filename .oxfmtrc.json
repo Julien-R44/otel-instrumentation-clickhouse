@@ -1,0 +1,19 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "experimentalSortImports": {
+    "order": "desc"
+  },
+  "trailingComma": "all",
+  "semi": false,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "printWidth": 100,
+  "ignorePatterns": [
+    ".adonisjs/**",
+    "node_modules/**",
+    "dist/**",
+    "build/**"
+  ]
+}

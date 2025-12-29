@@ -1,0 +1,65 @@
+{
+  "name": "@julr/otel-instrumentation-clickhouse",
+  "version": "1.0.0",
+  "description": "OpenTelemetry automatic instrumentation for ClickHouse client",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "format": "oxfmt",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "opentelemetry",
+    "otel",
+    "instrumentation",
+    "clickhouse",
+    "tracing",
+    "observability",
+    "monitoring"
+  ],
+  "author": "Julien Ripouteau <julien@ripouteau.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julien-r44/otel-instrumentation-clickhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julien-r44/otel-instrumentation-clickhouse/issues"
+  },
+  "homepage": "https://github.com/julien-r44/otel-instrumentation-clickhouse#readme",
+  "packageManager": "pnpm@10.26.2",
+  "engines": {
+    "node": ">=18"
+  },
+  "peerDependencies": {
+    "@opentelemetry/api": "^1.0.0"
+  },
+  "dependencies": {
+    "@opentelemetry/core": "^2.2.0",
+    "@opentelemetry/instrumentation": "^0.208.0"
+  },
+  "devDependencies": {
+    "@julr/tooling-configs": "^4.0.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@types/node": "^25.0.3",
+    "oxfmt": "^0.21.0",
+    "oxlint": "^1.36.0",
+    "oxlint-tsgolint": "^0.10.0",
+    "typescript": "^5.9.3"
+  }
+}
